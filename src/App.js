@@ -25,6 +25,8 @@ import RefDemo from "./components/Ref/RefDemo";
 import FocusInput from "./components/Ref/FocusInput";
 import FRParentInput from "./components/Ref/FRParentInput";
 import PortalDemo from "./components/PortalDemo";
+import Hero from "./components/Errorboundary/Hero";
+import ErrorBoundary from "./components/Errorboundary/ErrorBoundary";
 // import RegComp from "./components/PureComponents/RegComp";
 
 
@@ -32,7 +34,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PortalDemo />
+        {/* <PortalDemo /> */}
+        <ErrorBoundary>
+          <Hero heroName="Batman" />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName="Superman" />
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <Hero heroName="joker" />
+        </ErrorBoundary>
         {/* <FRParentInput /> */}
         {/* <FocusInput /> */}
         {/* <RefDemo /> */}
@@ -42,7 +53,7 @@ class App extends Component {
         {/* <LifecycleA /> */}
         {/* <h1 className="error">Error</h1> */}
         {/* <h1 className={styles.success}>Success</h1> */}
-      {/* <Inline /> */}
+        {/* <Inline /> */}
         {/* <Stylesheets primary={true}/> */}
         {/* <NameList /> */}
         {/* <UserGreeting /> */}
