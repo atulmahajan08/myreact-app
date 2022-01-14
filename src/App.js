@@ -20,13 +20,17 @@ import styles from './appStyles.module.css'
 // import FragmentDemo from "./components/Fragments/FragmentDemo";
 import Table from "./components/Fragments/Table";
 // import PureComp from "./components/PureComponents/PureComp";
-import ParentCompo from "./components/PureComponents/ParentCompo";
-import RefDemo from "./components/Ref/RefDemo";
-import FocusInput from "./components/Ref/FocusInput";
-import FRParentInput from "./components/Ref/FRParentInput";
-import PortalDemo from "./components/PortalDemo";
-import Hero from "./components/Errorboundary/Hero";
-import ErrorBoundary from "./components/Errorboundary/ErrorBoundary";
+// import ParentCompo from "./components/PureComponents/ParentCompo";
+// import RefDemo from "./components/Ref/RefDemo";
+// import FocusInput from "./components/Ref/FocusInput";
+// import FRParentInput from "./components/Ref/FRParentInput";
+// import PortalDemo from "./components/PortalDemo";
+// import Hero from "./components/Errorboundary/Hero";
+// import ErrorBoundary from "./components/Errorboundary/ErrorBoundary";
+import ClickCounter from "./components/HigherOrderComponent/ClickCounter";
+import HoverCounter from "./components/HigherOrderComponent/HoverCounter";
+// import MyPrivateComponent from "./components/HigherOrderComponent/HOCEx2/MyPrivateComponent";
+// import MyLoggedComponent from "./components/HigherOrderComponent/HOCEX.3/MyLoggedComponent";
 // import RegComp from "./components/PureComponents/RegComp";
 
 
@@ -34,8 +38,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <ClickCounter name="Atul" />
+        <HoverCounter name="Vikky" />
+        {/* <MyPrivateComponent /> */}
+        {/* <MyLoggedComponent /> */}
         {/* <PortalDemo /> */}
-        <ErrorBoundary>
+        {/* <ErrorBoundary>
           <Hero heroName="Batman" />
         </ErrorBoundary>
         <ErrorBoundary>
@@ -43,7 +51,7 @@ class App extends Component {
         </ErrorBoundary>
         <ErrorBoundary>
           <Hero heroName="joker" />
-        </ErrorBoundary>
+        </ErrorBoundary> */}
         {/* <FRParentInput /> */}
         {/* <FocusInput /> */}
         {/* <RefDemo /> */}
