@@ -41,3 +41,8 @@ const withCounter =(WrappedComponent) => {
 }
 
 export default withCounter
+
+
+// React HOC example with Hooks
+
+// https://codesandbox.io/s/higher-order-components-and-react-hooks-wby4w?file=/src/withDataFetching.jsx

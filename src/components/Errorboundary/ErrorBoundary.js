@@ -25,6 +25,7 @@ class ErrorBoundary extends Component {
             return <h1>Something went wrong</h1>
         }
         return this.props.children  // it refers to components which we are actually rendering
+        // herer this.props.children are works same as we have 2-3 components inside <ErrorBoundary />
     }
 }
 

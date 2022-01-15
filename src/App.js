@@ -29,6 +29,10 @@ import Table from "./components/Fragments/Table";
 // import ErrorBoundary from "./components/Errorboundary/ErrorBoundary";
 import ClickCounter from "./components/HigherOrderComponent/ClickCounter";
 import HoverCounter from "./components/HigherOrderComponent/HoverCounter";
+import ClickCounterTwo from "./components/RenderProps.js/ClickCounterTwo";
+import HoverCounterTwo from "./components/RenderProps.js/HoverCounterTwo";
+import User from "./components/RenderProps.js/User";
+import Counter from "./components/RenderProps.js/Counter";
 // import MyPrivateComponent from "./components/HigherOrderComponent/HOCEx2/MyPrivateComponent";
 // import MyLoggedComponent from "./components/HigherOrderComponent/HOCEX.3/MyLoggedComponent";
 // import RegComp from "./components/PureComponents/RegComp";
@@ -38,8 +42,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ClickCounter name="Atul" />
-        <HoverCounter name="Vikky" />
+        {/* <Counter render={(count, incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount} />} />
+        <Counter render={(count, incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount} />} /> */}
+
+        {/* 2nd method without passing it as a render */}
+        <Counter>
+          {(count, incrementCount) => (<ClickCounterTwo count={count} incrementCount={incrementCount} />)}
+        </Counter>
+        <Counter>
+          {(count, incrementCount) => (<HoverCounterTwo count={count} incrementCount={incrementCount} />)}
+        </Counter>
+
+        {/* <ClickCounterTwo />
+        <HoverCounterTwo />  
+        <User render={(isLoggedIn) => isLoggedIn ? "Atul": "Guest"}/> */}
+        {/* <ClickCounter name="Atul" />
+        <HoverCounter name="Vikky" /> */}
         {/* <MyPrivateComponent /> */}
         {/* <MyLoggedComponent /> */}
         {/* <PortalDemo /> */}
