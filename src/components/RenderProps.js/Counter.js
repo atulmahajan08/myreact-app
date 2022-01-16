@@ -12,7 +12,7 @@ class Counter extends Component {
     incrementCount = () => {
         this.setState(prevState => {
             return { count: prevState.count + 1 }
-        })
+        }, () => console.log('The name has updated and component re-rendered'))
     }
 
     render() {
@@ -30,5 +30,5 @@ class Counter extends Component {
         )
     }
 }
- 
+
 export default Counter
