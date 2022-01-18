@@ -33,6 +33,8 @@ import ClickCounterTwo from "./components/RenderProps.js/ClickCounterTwo";
 import HoverCounterTwo from "./components/RenderProps.js/HoverCounterTwo";
 import User from "./components/RenderProps.js/User";
 import Counter from "./components/RenderProps.js/Counter";
+import ComponentC from "./components/Context/ComponentC";
+import { UserProvider } from "./components/Context/userContext";
 // import MyPrivateComponent from "./components/HigherOrderComponent/HOCEx2/MyPrivateComponent";
 // import MyLoggedComponent from "./components/HigherOrderComponent/HOCEX.3/MyLoggedComponent";
 // import RegComp from "./components/PureComponents/RegComp";
@@ -46,13 +48,15 @@ class App extends Component {
         <Counter render={(count, incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount} />} /> */}
 
         {/* 2nd method without passing it as a render */}
-        <Counter>
+        {/* <Counter>
           {(count, incrementCount) => (<ClickCounterTwo count={count} incrementCount={incrementCount} />)}
         </Counter>
         <Counter>
           {(count, incrementCount) => (<HoverCounterTwo count={count} incrementCount={incrementCount} />)}
-        </Counter>
-
+        </Counter> */}
+        <UserProvider value="atul">
+        <ComponentC />
+        </UserProvider>
         {/* <ClickCounterTwo />
         <HoverCounterTwo />  
         <User render={(isLoggedIn) => isLoggedIn ? "Atul": "Guest"}/> */}
